@@ -1,0 +1,108 @@
+﻿@Master['master.html']
+
+@Section['AllLessonsUrl']#all-lessons@EndSection
+
+@Section['Content']
+      <div class="row-fluid">
+        <h2>@!Model.Lesson.Title</h2>
+        <div class="lesson-description">
+          @Model.Lesson.Description
+        </div>
+      </div>
+      <div class="row-fluid">
+        
+        <div class="span4" ng-controller="TaskController">
+          <h3>Task</h3>
+          <div ng-bind-html-unsafe="question.description"></div>
+          <button class="btn" ng-click="showAnswer()">Show me the answer</button>
+          <h4>What your results should look like</h4>
+          <query-results-table data="question.expectedAnswer"></query-results-table>
+        </div>
+
+        <div class="span4">
+          <h3>Query</h3>
+          <textarea class="query-input" ng-model="query"></textarea>
+          <button class="btn btn-primary" ng-click="runQuery()">Run it</button>
+        </div>
+
+        <div class="span4 results-widget" ng-controller="ResultsController">
+          <h3>Result</h3>
+          <p ng-show="error" class="error">There was an error in your SQL query: {{error}}</p>
+          <pre ng-show="executedQuery" class="executed-query">{{executedQuery}}</pre>
+          <query-results-table data="results"></query-results-table>
+          <p ng-show="isCorrectAnswer">
+            Correct answer. Bonza!
+          </p>
+          <p ng-show="isCorrectAnswer && !isLastQuestion()">
+            <button class="btn btn-success" ng-click="nextQuestion()">Give me another</button>
+          </p>
+          <div ng-show="isCorrectAnswer && isLastQuestion()">
+            <p>
+              Congratulations! You've completed all of the tasks in this lesson.
+            </p>
+            @If.HasNextLesson
+              <p>
+                <a class="btn btn-success" href="@Model.NextLessonUrl">Next lesson: @Model.NextLessonTitle</a>
+              </p>
+            @EndIf
+            @IfNot.HasNextLesson
+              <p>
+                This is the last lesson &ndash; so far! If have any feedback or
+                suggestions, or would just like to know when there are any more
+                lessons, send us an email at <a href="mailto:hello@learnsomesql.com">hello@learnsomesql.com</a>.
+              </p>
+            @EndIf
+          </div>
+          
+          <p ng-show="!isCorrectAnswer && executedQuery">
+            Wrong answer. Have another a go.
+          </p>
+          <p ng-show="hint">
+            <strong>Hint:</strong> {{hint}}
+          </p>
+        </div>
+
+      </div>
+      @If.HasNextLesson
+        <div class="row-fluid">
+          <div class="span12">
+            <div class="well">
+              <h2>Next lesson: @Model.NextLessonTitle</h2>
+              <p>Once you think you've nailed this lesson, feel free to go to the next lesson.</p>
+              <a class="btn btn-success" href="@Model.NextLessonUrl">Next lesson</a>
+            </div>
+          </div>
+        </div>
+      @EndIf
+      <div class="row-fluid">
+        <div class="span6">
+          <div class="well" id="all-lessons">
+            <h2>All lessons</h2>
+            <ul>
+              @Each.Lessons
+                <li><a href="@Current.Url">@Current.Title</a></li>
+              @EndEach
+            </ul>
+          </div>
+        </div>
+        
+        <div class="span6">
+          <div class="well">
+            <h2>Questions? Suggestions?</h2>
+            
+            <p>
+              We'd love to hear any feedback you have for us.
+              Just send an email to <a href="mailto:hello@learnsomesql.com">hello@learnsomesql.com</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+   
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.3/underscore-min.js "></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    
+    <input type="hidden" id="questions-json" value="@!Model.QuestionsJson" />
+
+    <script src="/static/main.js?v=3"></script>
+@EndSection

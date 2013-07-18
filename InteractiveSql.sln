@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6F32BEEA-132F-4C8B-8BD3-E54CA41D945D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedGate.Publishing.InteractiveSql", "RedGate.Publishing.InteractiveSql\RedGate.Publishing.InteractiveSql.csproj", "{35B06627-361B-4010-B05A-30258FD05EB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedGate.Publishing.InteractiveSql.SelfHosted", "RedGate.Publishing.InteractiveSql.SelfHosted\RedGate.Publishing.InteractiveSql.SelfHosted.csproj", "{9B84DFFB-A628-4787-94AB-8A5D0D927CA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedGate.Publishing.InteractiveSql.Web", "RedGate.Publishing.InteractiveSql.Web\RedGate.Publishing.InteractiveSql.Web.csproj", "{3D17819A-0F21-4CE2-98F8-79D33FAA0328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedGate.Publishing.InteractiveSql.Web.Tests", "RedGate.Publishing.InteractiveSql.Web.Tests\RedGate.Publishing.InteractiveSql.Web.Tests.csproj", "{7B9DFC63-6FA0-45FF-935C-633C51188477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedGate.Publishing.InteractiveSql.Tests", "RedGate.Publishing.InteractiveSql.Tests\RedGate.Publishing.InteractiveSql.Tests.csproj", "{7AF7BDF1-84C5-4C5C-942E-7E734A7DAF40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedGate.Publishing.InteractiveSql.Courses", "RedGate.Publishing.InteractiveSql.Courses\RedGate.Publishing.InteractiveSql.Courses.csproj", "{9970A348-B58E-45AD-B6B8-44710B0ACEFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedGate.Publishing.InteractiveSql.AspNet", "RedGate.Publishing.InteractiveSql.AspNet\RedGate.Publishing.InteractiveSql.AspNet.csproj", "{A675F86F-B87F-4820-848A-F6192B0A3D8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35B06627-361B-4010-B05A-30258FD05EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35B06627-361B-4010-B05A-30258FD05EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35B06627-361B-4010-B05A-30258FD05EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35B06627-361B-4010-B05A-30258FD05EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B84DFFB-A628-4787-94AB-8A5D0D927CA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B84DFFB-A628-4787-94AB-8A5D0D927CA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B84DFFB-A628-4787-94AB-8A5D0D927CA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B84DFFB-A628-4787-94AB-8A5D0D927CA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D17819A-0F21-4CE2-98F8-79D33FAA0328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D17819A-0F21-4CE2-98F8-79D33FAA0328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D17819A-0F21-4CE2-98F8-79D33FAA0328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D17819A-0F21-4CE2-98F8-79D33FAA0328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9DFC63-6FA0-45FF-935C-633C51188477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9DFC63-6FA0-45FF-935C-633C51188477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9DFC63-6FA0-45FF-935C-633C51188477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9DFC63-6FA0-45FF-935C-633C51188477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF7BDF1-84C5-4C5C-942E-7E734A7DAF40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF7BDF1-84C5-4C5C-942E-7E734A7DAF40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF7BDF1-84C5-4C5C-942E-7E734A7DAF40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF7BDF1-84C5-4C5C-942E-7E734A7DAF40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9970A348-B58E-45AD-B6B8-44710B0ACEFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9970A348-B58E-45AD-B6B8-44710B0ACEFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9970A348-B58E-45AD-B6B8-44710B0ACEFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9970A348-B58E-45AD-B6B8-44710B0ACEFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A675F86F-B87F-4820-848A-F6192B0A3D8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A675F86F-B87F-4820-848A-F6192B0A3D8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A675F86F-B87F-4820-848A-F6192B0A3D8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A675F86F-B87F-4820-848A-F6192B0A3D8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
